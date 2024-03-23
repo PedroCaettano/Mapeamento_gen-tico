@@ -1,3 +1,6 @@
+// Trabalho realizado por:
+// Pedro Henrique Caetano Barbosa
+
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -5,11 +8,13 @@
 
 using namespace std;
 
+// Estabelecendo informações básicas do índividuo que vamos procurar no mapeamento genético.
 struct Individuo {
     vector<double> genes;
-    double fitness;
+    double fitness; // Termo usado no trabalho para representar uma boa genética dos genes
 };
 
+// Estabelecendo valores para a entrada/saída de informações no código
 void inicializarPopulacao(vector<Individuo>& populacao, int tamanhoPopulacao, int numGenes) {
         for (int i = 0; i < tamanhoPopulacao; ++i) {
         Individuo individuo;
@@ -21,6 +26,7 @@ void inicializarPopulacao(vector<Individuo>& populacao, int tamanhoPopulacao, in
     }
 }
 
+// Função para avaliar o fitness de cada indivíduo na população
 void avaliarFitness(vector<Individuo>& populacao) {
     for (auto& individuo : populacao) {
         double a = individuo.genes[0];
@@ -31,6 +37,7 @@ void avaliarFitness(vector<Individuo>& populacao) {
         double f = individuo.genes[5];
         double soma = 0.0;
 
+// Função realizada para o calculo dos genes
         for (double x = -10; x <= 10; x += 0.1) {
             double x2 = x * x;
             double x3 = x2 * x;
@@ -48,12 +55,14 @@ void avaliarFitness(vector<Individuo>& populacao) {
 int main() {
     srand(time(nullptr));
 
+// Declarando o tamanho máximo de variáveis 
     vector<int> tamanhosPopulacao = {10, 100, 1000};
     int maxGeracoes = 500;
     double taxaMutacao = 0.01;
     double taxaCrossover = 0.7;
-    int numGenes = 6;
+    int numGenes = 6; // Número de genes que vamos trabalhar neste código
 
+// Iniciando códigos responsáveis pelo calculo do tamanho da população
     for (int tamanho : tamanhosPopulacao) {
         vector<Individuo> populacao;
         inicializarPopulacao(populacao, tamanho, numGenes);
@@ -69,6 +78,7 @@ int main() {
             }
         }
 
+// Exibindo o melhor individuo com base nos seus genes
         cout << "Melhor indivíduo para população de tamanho " << tamanho << ":" << endl;
         for (double gene : melhorIndividuo.genes) {
             cout << gene << " ";
