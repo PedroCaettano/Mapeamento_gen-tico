@@ -1,0 +1,101 @@
+//Dia 03/04/2024
+// O código pode ser feito de várias formas diferentes, porém esse é o código do professor
+
+#include <math.h>
+#define MARGEM_ERRO 1
+#define
+#define
+
+srand(time(0))
+int tamPopulacao,populacao[1000], maxGens, a, b, c, d, e, f 
+float taxaMutacao;
+
+int malhorX, piorX, melhorXDeTodos;
+long long int melhorDistancia, piorDistancia, melhorDistanciaDeTodas
+
+int sobreviventesCount =0, geracaoEncontrado = 1;
+
+cout << "Tamanho a população (10, 100, 1000): ";
+cin>>tamPopulacao;
+
+
+avaliaDistancia(populacao, tamPopulacao)
+
+
+void selecao
+long long int fx = a*pow(populacao[i], 5) + b*pow(populacao[i])
+long long int dist = llabs(fx);
+long long int random = (rand() % ((piorDistancia+1) - melhorDistancia))
+if(random >= dist){
+   populacao[sobreviventesCount] = populacao[i]
+   sobreviventesCount++; 
+}
+
+
+
+void mutacao
+for (int i = 0; i < tamPopulacao)
+
+
+
+void avaliadistancia
+for (int i = 0; i < tamPopulacao; i++){
+     int x = populacao[i];
+     sobreviventesCount++;
+}
+
+
+long long int fx a*pow(populacao[i], 5) + b*pow(populacao[i])
+long long int dist = llabs(fx);
+if (geracaoEncontrado < 0 || dist < melhorDistanciaDeTodas){
+    melhorDistanciaDeTodas = dist;
+    melhorXDeTodos = populacao[i];
+    geracaoEncontrado = gen;
+}
+
+
+
+void iniciapopulacao (int *populacao, int tamPopulacao, int randMin)
+for(int i = 0; i < tamPopulacao; i++){
+    populacao[i] = (rand())
+}
+
+for ()
+melhorX = populacao[0]; piorx = populacao[0];
+avaliaDistancia(populacao, tamPopulacao, a,b,c,d,e,f, gen);
+
+
+void cruzamento
+int criado = 0;
+while (criados, tamPopulacao - sobreviventesCount) {
+       int a = populacao[rand() % sobreviventsMax];
+       int b = populacao[rand() % sobreviventsMax];
+
+       int absA = abs(a);
+       int absB = abs(b);1 = 0
+
+       int comprimentoA = (a ! = 0 ) ? (log2(absA) + 1) : 1;
+       int comprimentoB = (b ! = 0 ) ? (log2(absA) + 1) : 1;
+
+       int maiorComprimento
+       int crossoverPoint
+       int leftMask = fullMask << crossoverPoint;
+       int rightMask
+
+       int filho1
+       int filho2
+       int comprimentoFilho1
+       int comprimentoFilho2
+
+       int sinalA = (a < 0) ? -1 : 1;
+       int sinalB = (b < 0) ? -1 : 1;
+       int sinalFilho = sinalA * sinalB
+
+       filho1 *= sinalFilho;
+       filho2 *= sinalFilho;
+
+}
+
+avaliaDistancia(populacao, tamPopulacao, a, b, c, d, e, f, maxGens)
+
+long long int
